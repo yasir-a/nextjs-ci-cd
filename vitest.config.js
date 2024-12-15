@@ -5,5 +5,10 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: "jsdom",
+    coverage: {
+      provider: "v8",
+      extension: [".tsx"],
+      reporter: ["text", "json-summary", "json"],
+    },
   },
 });
