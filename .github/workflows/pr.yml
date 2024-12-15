@@ -9,6 +9,10 @@ jobs:
   build-and-run-coverage:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -21,3 +25,6 @@ jobs:
 
       - name: Run Tests and Coverage
         run: npm run coverage
+
+      - name: Report Coverage
+        uses: davelosert/vitest-coverage-report-action@v2

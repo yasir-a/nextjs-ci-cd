@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest --no-watch",
+    "coverage": "vitest --coverage",
     "prepare": "husky"
   },
   "dependencies": {
